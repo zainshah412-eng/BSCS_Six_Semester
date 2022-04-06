@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BSCSIT Sample Project 1</string>
+    <string name="Sign_in">Sign In</string>
+    <string name="tv_login_header_msg">Please enter your email and password to sign in.</string>
+    <string name="your_password">Your Password</string>
+    <string name="your_email">Your Email</string>
+    <string name="submit">Submit</string>
+</resources>
