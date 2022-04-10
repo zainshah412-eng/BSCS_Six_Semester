@@ -17,6 +17,7 @@ class RelavtiveLayoutActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun initView(){
         binding.submitButton.setOnClickListener(this)
+        binding.imgLogo
     }
 
     override fun onClick(p0: View?) {
