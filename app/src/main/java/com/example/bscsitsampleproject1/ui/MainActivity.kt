@@ -1,14 +1,17 @@
 package com.example.bscsitsampleproject1.ui
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bscsitsampleproject1.R
 import com.example.bscsitsampleproject1.adapter.RecyclerViewAdapter
+import com.example.bscsitsampleproject1.dbHelper.DBHelper
 import com.example.bscsitsampleproject1.model.StudentModel
 
 class MainActivity : AppCompatActivity(), View.OnClickListener,
@@ -16,6 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
     private lateinit var recyclerView: RecyclerView
     var studentAdapter: RecyclerViewAdapter? = null
     var studentList: ArrayList<StudentModel> = ArrayList()
+    @RequiresApi(Build.VERSION_CODES.P)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -56,7 +60,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
         recyclerView = findViewById(R.id.recyclerView)
     }
 
+    @RequiresApi(Build.VERSION_CODES.P)
     private fun setRecyclerViewData(){
+        studentList = DBHelper(applicationContext).getAllStudents() as ArrayList<StudentModel>
         studentAdapter = RecyclerViewAdapter(this,studentList,this)
         recyclerView.adapter = studentAdapter
     }

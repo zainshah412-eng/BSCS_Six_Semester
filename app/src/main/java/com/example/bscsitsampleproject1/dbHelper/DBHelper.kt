@@ -97,9 +97,9 @@ class DBHelper(
 
 
     @SuppressLint("Range")
-    fun getAllStudents(): List<StudentModel?>? {
+    fun getAllStudents(): ArrayList<StudentModel?>? {
         var res: Cursor? = null
-        var list: MutableList<StudentModel?>? = null
+        var list: ArrayList<StudentModel?>? = null
         var db: SQLiteDatabase? = null
         try {
             list = ArrayList<StudentModel?>()
