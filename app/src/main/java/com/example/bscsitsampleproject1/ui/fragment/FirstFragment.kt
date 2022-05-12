@@ -1,4 +1,4 @@
-package com.example.bscsitsampleproject1.fragment
+package com.example.bscsitsampleproject1.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

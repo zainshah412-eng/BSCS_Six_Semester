@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddStudentActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_add"
+            android:textColor="#000000"
+            android:textSize="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/xml_textbox_bg"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:hint="@string/student_name"
+                android:textColorHint="@color/light_grey"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/etRollNo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/xml_textbox_bg"
+                android:inputType="number"
+                android:padding="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:hint="@string/student_rollno"
+                android:textColorHint="@color/light_grey"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonAdd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/add"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

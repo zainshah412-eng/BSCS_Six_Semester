@@ -4,7 +4,11 @@
     <string name="tv_login_header_msg">Please enter your email and password to sign in.</string>
     <string name="your_password">Your Password</string>
     <string name="your_email">Your Email</string>
+    <string name="student_name">Name</string>
+    <string name="student_rollno">RollNo</string>
+
     <string name="submit">Submit</string>
+    <string name="add">Add</string>
     <string name="title_activity_action_bar">ActionBarActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -16,4 +20,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="action_favorite">favorite</string>
     <string name="action_settings">setting</string>
+    <string name="action_add">Add Student</string>
+    
 </resources>

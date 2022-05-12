@@ -10,7 +10,12 @@
 
     <!-- Settings, should always be in the overflow -->
     <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+        android:title="@string/action_add"
         app:showAsAction="never"/>
 
+    <item
+        android:id="@+id/action_share"
+        android:title="Share"
+        android:icon="@drawable/ic_baseline_child_care_24"
+        app:showAsAction="never" />
 </menu>
