@@ -10,9 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BSCSITSampleProject1">
-        <activity
-            android:name=".AddStudentActivity"
-            android:exported="false" />
+
         <activity
             android:name=".ui.LoginActivity"
             android:exported="false" />
@@ -26,10 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".classstudy.KiranActivity"
-            android:exported="false"
-            android:theme="@style/Theme.BSCSITSampleProject1.NoActionBar" />
         <activity
             android:name=".ActionActivity"
             android:exported="false"
@@ -50,7 +44,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.BSCSITSampleProject1.NoActionBar"/>
     </application>
 
 </manifest>

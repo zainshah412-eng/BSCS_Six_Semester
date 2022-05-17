@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bscsitsampleproject1.R
 import com.example.bscsitsampleproject1.adapter.RecyclerViewAdapter
@@ -34,14 +35,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
         return true
     }
 
+    @RequiresApi(Build.VERSION_CODES.P)
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.action_favorite ->{
                 Toast.makeText(this, "Action favorite", Toast.LENGTH_SHORT).show()
                 true
             }
-            R.id.action_settings ->{
-
+            R.id.action_add ->{
+                var studentModel = StudentModel(
+                    "1",
+                    "student"
+                )
+                DBHelper(applicationContext).insertPossibleConditions(studentModel)
+                setRecyclerViewData()
                 true
             }
             R.id.action_share ->{
@@ -62,7 +69,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
 
     @RequiresApi(Build.VERSION_CODES.P)
     private fun setRecyclerViewData(){
+        studentList.clear()
         studentList = DBHelper(applicationContext).getAllStudents() as ArrayList<StudentModel>
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         studentAdapter = RecyclerViewAdapter(this,studentList,this)
         recyclerView.adapter = studentAdapter
     }

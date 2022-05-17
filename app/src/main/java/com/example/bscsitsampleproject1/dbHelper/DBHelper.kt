@@ -38,9 +38,9 @@ class DBHelper(
         }
     }
 
-    init {
-
-    }
+   fun initDB(){
+       val db = this.readableDatabase
+   }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
         // TODO Auto-generated method stub
@@ -107,7 +107,7 @@ class DBHelper(
             res = db.rawQuery("select * from studentsTable", null)
             res.moveToFirst()
             while (res.isAfterLast == false) {
-                val student = StudentModel(res.getString(res.getColumnIndex("id")),res.getString(res.getColumnIndex("Desc")))
+                val student = StudentModel(res.getString(res.getColumnIndex("rollNo")),res.getString(res.getColumnIndex("name")))
                 list!!.add(student)
                 res.moveToNext()
             }

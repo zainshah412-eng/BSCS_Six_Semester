@@ -23,7 +23,7 @@ class ActionActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
-        R.id.action_settings -> {
+        R.id.action_add -> {
             // User chose the "Settings" item, show the app settings UI...
             Toast.makeText(this, "Action Setting", Toast.LENGTH_SHORT).show()
             true

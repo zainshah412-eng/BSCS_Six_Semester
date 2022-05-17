@@ -14,6 +14,7 @@ class AppApplication : Application() {
         lateinit var dbHelper: DBHelper
     }
 
+    @RequiresApi(Build.VERSION_CODES.P)
     override fun onCreate() {
         super.onCreate()
         initialize()
@@ -23,9 +24,9 @@ class AppApplication : Application() {
     private fun initialize() {
         instance = this
         sessionManager = SessionManager(applicationContext)
-     //   dbHelper = DBHelper(applicationContext)
-//        val dbHelper = DBHelper(this)
-//        dbHelper.initDB()
+        dbHelper = DBHelper(applicationContext)
+        dbHelper.initDB()
+
     }
 
     override fun onTerminate() {
